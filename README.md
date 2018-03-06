@@ -9,7 +9,7 @@
 
 ***SAMPLE:***
 
-![minidiary](https://user-images.githubusercontent.com/36429862/37021975-d1144c86-2164-11e8-8a68-a9f7b9c250d0.png)
+
 
 ## Features
 
