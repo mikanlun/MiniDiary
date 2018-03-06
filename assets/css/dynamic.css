@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+/**
+ * ウィンドウ上端でグローバルナビゲーションを固定する
+ */
+.fixed {
+    position: fixed;
+    z-index: 11;
+}
+
+.navbar.fixed {
+    width: 97%;
+}
+
+
+/**
+ * スクロールしてページトップに戻る
+ */
+/* ページトップに戻るボタンのスタイル */
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 77%;
+    z-index: 11;
+}
+
+#page-top a {
+    display: block;
+    width: 50px;
+    padding: 30px 0;
+    background: #aaa;
+    border-radius: 5px;
+    background-image: url(/assets/asset/arrow-1.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    text-indent: -5000px;
+}
+
+#page-top a:hover {
+    background-image: url(/assets/asset/arrow-2.png);
+}
+
+#page-top a:active {
+    background-image: url(/assets/asset/arrow-3.png);
+}
+
+
+.headerDate {
+    display: inline-block;
+    margin: 0;
+}
+
+/**
+ * date選択ボタン
+ */
+.slide a.prev,
+.slide a.next {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-indent: -5000px;
+    cursor: pointer;
+}
+
+.slide a.prev {
+    background: url(/assets/asset/arrow-left1.png) #000 50% 50% no-repeat;
+    left: 0;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
+.slide a.prev:hover {
+    background: url(/assets/asset/arrow-left2.png) #000 50% 50% no-repeat;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
+.slide a.prev:active {
+    background: url(/assets/asset/arrow-left3.png) #000 50% 50% no-repeat;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
+.slide a.next {
+    background: url(/assets/asset/arrow-right1.png) #000 50% 50% no-repeat;
+    right: 0;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
+.slide a.next:hover {
+    background: url(/assets/asset/arrow-right2.png) #000 50% 50% no-repeat;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
+.slide a.next:active {
+    background: url(/assets/asset/arrow-right3.png) #000 50% 50% no-repeat;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
+/**
+ * 検索ユーザーの表示幅
+ */
+#datepicker-default #searchUserId {
+    width: 150px;
+}
+
+/**
+ * dateピッカーの表示幅
+ */
+#datepicker-default input[type='text'] {
+    width: 110px;
+}
+
+/**
+ * ユーザーの表示幅
+ */
+.usersDiary .userDiary {
+    width: 31.5%;
+    height: 470px;
+}
+
+/**
+ * カレンダー
+ */
+#calender th.head {
+    width: 30px;
+}
+
+#calender th.headYM {
+    width: 100px;
+    text-align: center;
+}
+
+#calender td {
+    text-align: right;
+}
+
+#calender .red {
+    color: red;
+}
+
+#calender .blue {
+    color: blue;
+}
+
+/**
+ * カレンダー移動ボタン
+ */
+#calender a.prev,
+#calender a.next {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    text-indent: -5000px;
+    cursor: pointer;
+}
+
+#calender a.prev {
+    background: url(/assets/asset/arrow-left1.png) #000 30% 30% no-repeat;
+    left: 0;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
+#calender a.prev:hover {
+    background: url(/assets/asset/arrow-left2.png) #000 30% 30% no-repeat;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
+#calender a.prev:active {
+    background: url(/assets/asset/arrow-left3.png) #000 30% 30% no-repeat;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
+#calender a.next {
+    background: url(/assets/asset/arrow-right1.png) #000 30% 30% no-repeat;
+    right: 0;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
+#calender a.next:hover {
+    background: url(/assets/asset/arrow-right2.png) #000 30% 30% no-repeat;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
+#calender a.next:active {
+    background: url(/assets/asset/arrow-right3.png) #000 30% 30% no-repeat;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
+.register {
+    background-color: #7fffd4;
+}

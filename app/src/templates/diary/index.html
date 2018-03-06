@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="border-top border-bottom border-dark mb-3 rounded bg-light form-inline">
+    <div class="ml-3">
+        <div class="slide my-3">
+            <a class="prev mx-3" data-change="{{ preDate }}" data-now="{{ nowDate }}" data-login="{{ login }}"></a>
+            <h3 class="headerDate">{{ nowDate }} ({{ nowWeek }})</h3>
+            <a class="next mx-3" data-change="{{ nextDate }}" data-now="{{ nowDate }}" data-login="{{ login }}"></a>
+        </div>
+        <div class="form-group ml-3 mb-3 py-1 border border-primary rounded bg-white" id="datepicker-default">
+            <form action="" method="post">
+                <div class="form-inline">
+                    <select name="searchUserId" class="form-control mx-3" id="searchUserId">
+                    {# 検索ユーザー一覧 #}
+                    {% for searchUser in searchUsers %}
+                        <option value="{{ searchUser.id }}" {{ searchUser.id == searchUserId ? ' selected' : '' }}>{{ searchUser.name }}</option>
+                    {% endfor %}
+                    </select>
+                    {# 検索日付 #}
+                    <div class="input-group date">
+                        <input type="text" name="searchDate" class="form-control form-control-sm rounded" value="{{ nowDate }}" readonly>
+                        <div class="input-group-addon mt-4 ml-2">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mx-3" role="button">検索</button>
+                </div>
+                {# CSRF対策 #}
+                <input type="hidden" name="token" value="{{token}}">
+            </form>
+        </div>
+    </div>
+    <div class="m-5">
+        <a class="btn btn-info btn-sm" href="/" role="button">今日に戻る</a>
+    </div>
+    {# カレンダー #}
+    <div id="calender" class="m-3">
+    </div>
+</div>
+<div class="usersDiary p-2 clearfix">
+    {% if unregisterFlg == true %}
+        {# ユーザーのダイアリーは未登録 #}
+
+        {% include 'diary/include/index_unregister.html' %}
+
+    {% else %}
+        {# ユーザーのダイアリーは登録済み #}
+
+        {% for diary in diaries %}
+
+            {% include 'diary/include/index_registered.html' %}
+
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}
