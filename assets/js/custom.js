@@ -144,7 +144,7 @@ $(function(){
         var login = $this.siblings().find('a').data('login');
         var nowDates = nowDate.split('-');
         var changeMonth = nowDates[0] + '-' + nowDates[1];
-
+        
         $.ajax({
             url:'/app/src/diary/getCalender.php',
             type:'POST',
@@ -167,7 +167,7 @@ $(function(){
     $(document).on('click', '#calender .prev, #calender .next', function() {
         $this = $(this);
         var changeMonth = $this.data('change');
-        var login = $this.siblings().find('a').data('login');
+        var login = $this.parents('#calender').siblings('.ml-3').find('a').data('login');
 
         $.ajax({
             url:'/app/src/diary/getCalender.php',
