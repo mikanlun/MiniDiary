@@ -68,9 +68,8 @@ $wd1 = date("w", mktime(0, 0, 0, $m, 1, $y));
 for ($i = 1; $i <= $wd1; $i++) {
     echo "<td> </td>";
 }
-
-$d = 1;
-while (checkdate($m, $d, $y)) {
+$dd = date('t', strtotime($y . '-' . $m . '-01'));
+for ($d = 1; $d <= $dd; $d++) {
 
     // 日曜：赤色
     if(date("w", mktime(0, 0, 0, $m, $d, $y)) == 0) {
@@ -108,7 +107,6 @@ while (checkdate($m, $d, $y)) {
         }
     }
 
-    $d++;
 }
 
 // 最後の週の土曜日まで空のセルを作成
